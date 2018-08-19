@@ -2,9 +2,9 @@
 
 How to use it:
 
-1. Clone the repository to `$GOPATH/src/github.com`
-2. Fetch the vendor packages `cd $GOPATH/src/github.com/token/chaincode && govendor fetch github.com/hyperledger/fabric/protos/msp`
-2. Run tests: `cd $GOPATH/src/github.com/token/chaincode && go test`
+1. Clone the repository
+2. Build with docker: `$ make build`
+2. Run tests: `$ make test`
 3. Install on peers:
 
 ```
