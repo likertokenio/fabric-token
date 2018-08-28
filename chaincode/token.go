@@ -26,7 +26,7 @@ import (
 type TokenChaincode struct {
 }
 
-const KeyToken = "__token"
+const KeyToken = "likertoken"
 const IndexBalance = "cn~balance"
 const IndexAllowance = "cn~allowance"
 
