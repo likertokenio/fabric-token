@@ -1,4 +1,4 @@
-### Ethereum-style token smart contract for Hyperledger Fabric 1.0
+### Ethereum-style token smart contract for Hyperledger Fabric 1.2
 
 How to use it:
 
@@ -8,11 +8,15 @@ How to use it:
 3. Install on peers:
 
 ```
-peer chaincode install -n token -v 1.0 -p github.com/token/chaincode
+peer chaincode install -n token -v 1.0 -p github.com/likerworldio/fabric-token/chaincode
 ```
 4. Instantiate on peers:
 ```
-peer chaincode instantiate -o orderer_address:7050  -C mychannel -n token -v 1.0 -p github.com/token/chaincode -c '{"Args":["init","{\"name\": \"Fabric Demo Token\", \"symbol\": \"FTD\", \"decimals\": 2, \"totalSupply\": 1000}"]}'
+peer chaincode instantiate \
+  -o orderer_address:7050 \
+  -C mychannel \
+  -n token -v 1.0 \
+  -c '{"Args":["init","{\"name\": \"Fabric Demo Token\", \"symbol\": \"FTD\", \"decimals\": 2,\"totalSupply\": 1000}"]}'
 ```
 5. Query balance:
 ```
